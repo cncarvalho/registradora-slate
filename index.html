@@ -196,25 +196,22 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+    <link href="stylesheets/screen-a1ce949a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;json&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" alt="Navbar" />
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="images/logo-5558ca84.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="json">json</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,282 +219,916 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#introducao" class="toc-h1 toc-link" data-title="Introdução">Introdução</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#autenticacao" class="toc-h1 toc-link" data-title="Autenticação">Autenticação</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#duplicatas" class="toc-h1 toc-link" data-title="Duplicatas">Duplicatas</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#cadastrar-duplicata" class="toc-h2 toc-link" data-title="Cadastrar duplicata">Cadastrar duplicata</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#consultar-duplicata" class="toc-h2 toc-link" data-title="Consultar duplicata">Consultar duplicata</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#listar-duplicatas" class="toc-h2 toc-link" data-title="Listar duplicatas">Listar duplicatas</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#consultas-avancadas" class="toc-h1 toc-link" data-title="Consultas avançadas">Consultas avançadas</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#paginacao-de-resultados" class="toc-h2 toc-link" data-title="Paginação de resultados">Paginação de resultados</a>
+                  </li>
+                  <li>
+                    <a href="#filtros-de-pesquisa" class="toc-h2 toc-link" data-title="Filtros de pesquisa">Filtros de pesquisa</a>
+                  </li>
+                  <li>
+                    <a href="#ordenacao-de-resultados" class="toc-h2 toc-link" data-title="Ordenação de resultados">Ordenação de resultados</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#erros" class="toc-h1 toc-link" data-title="Erros">Erros</a>
           </li>
       </ul>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='introducao'>Introdução</h1>
+<p>Seja bem-vindo(a) à documentação de referência da Registradora API! Nesta página você encontrará de forma detalhada os passos necessários para se autenticar na nossa API e utilizar os diversos endpoints disponíveis. </p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>Na barra lateral do lado esquerdo, você poderá encontrar o índice da documentação e uma caixa de pesquisa. Utilize-os para navegar pelas seções deste documento e para encontrar alguma informação específica.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<p>Já na barra lateral do lado direito, é o lugar onde exibimos códigos de exemplo que você pode utilizar para testar a nossa API. Você pode selecionar em qual linguagem de programação os exemplos serão exibidos através do menu de seleção na parte superior.  </p>
+<h1 id='autenticacao'>Autenticação</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Este é um exemplo do cabeçalho de uma requisição contendo o token de autenticação do usuário:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"Authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27cc4835-53e9-4dcc-a064-d6609549f9ea.QHrAqIvp4M8dxWmmQZ1h3P85Vww"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
+<blockquote>
+<p>Não se esqueça de substituir o valor do exemplo pelo seu token.</p>
+</blockquote>
+
+<p>A Registradora utiliza tokens de autenticação para permitir o acesso de usuários cadastrados à API. Você pode gerar um novo token de autenticação através do nosso <a href="http://example.com/developers">portal</a>.</p>
+
+<p>Após obter o seu token, basta incluí-lo no cabeçalho das requisições feitas à API para que seu acesso possa ser autorizado dentro do servidor. Consulte o formato do cabeçalho no painel de exemplo.</p>
+
+<p><img src="images/autenticacao/gerar-token-678a4487.gif" alt="Gerando um token pelo portal" /></p>
+<h1 id='duplicatas'>Duplicatas</h1><h2 id='cadastrar-duplicata'>Cadastrar duplicata</h2>
+<blockquote>
+<p>Este é um exemplo do objeto que deve ser passado no corpo da requisição:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"asset_trade_bill"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"acquired_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-15 17:20:35 -0300"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"due_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-24"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"emitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-19 08:27:03 -0300"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"92.32"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"goods"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"assignor_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"address_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Piritiba"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lote 50"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7665"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"University Square"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rua Thomas"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78596-060"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"asset_part_variant_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"city_registration_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9xbrf7ec0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Muniz-Bernardes"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Talita Bernardes"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chase.hills@dach.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(93) 91943-3443"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"johana.rogahn@graham.org"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rafaela Ouriques"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(34) 96506-3625"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state_registration_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4hceb2"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"document_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01054635668"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"guarantor_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"address_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alto Rio Novo"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Quadra 33"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"121"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Royal Court"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ES"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Viela Davi Cardoso"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51877-246"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"asset_part_variant_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"city_registration_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4r8batjlo"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da Rosa-Simão"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gabriela Garcês"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jack@ebertlueilwitz.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(47) 95106-2579"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tonie_funk@terrywolff.name"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antonella Henriques"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(95) 92094-0120"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state_registration_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nsee1i"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"document_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02266451936"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"payer_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"address_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Santo Antônio do Içá"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lote 24"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s/n"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pine Place"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rua João Gabriel"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50094-815"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"asset_part_variant_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"city_registration_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xfc9bwxu2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da Conceição, da Cunha e Amoreira"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lara Rodrigues"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"madeleine@daughertycrona.net"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_representative_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(44) 97906-5743"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"melda_kuvalis@coleruecker.name"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luiz Henrique Brum Neto"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(86) 99680-0484"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"state_registration_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"n4o01n"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"document_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"05713216152"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"asset_coverage_nfe_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"nfe_access_key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35200248477780000191550010000033561442834725"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Este endpoint realiza o cadastro de um novo ativo do tipo duplicata na plataforma.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p><code>POST /api/v1/assets/trade_bills</code></p>
+<h3 id='request-parameters'>Request Parameters</h3>
+<p>A seguir apresentamos a definição dos parâmetros aceitos por este endpoint. O objeto JSON enviado na requisição deve possuir uma chave raiz chamada <code>asset_trade_bill</code> e todos os outros parâmetros devem estar contidos dentro desta chave.</p>
+<h3 id='asset_trade_bill'>asset_trade_bill</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td><code>acquired_at</code></td>
+<td><code>datetime</code></td>
+<td>sim</td>
+<td>Data e hora de aquisição do ativo.</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td><code>due_date</code></td>
+<td><code>date</code></td>
+<td>sim</td>
+<td>Data de vencimento do ativo.</td>
+</tr>
+<tr>
+<td><code>emitted_at</code></td>
+<td><code>datetime</code></td>
+<td>sim</td>
+<td>Data e hora de emissão do ativo.</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Situação atual do cadastro do ativo na plataforma. Consulte a seção <a href="#status-de-duplicatas">Status de duplicatas</a> para a lista completa dos status possíveis.</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>decimal</code></td>
+<td>sim</td>
+<td>Valor do ativo.</td>
+</tr>
+<tr>
+<td><code>value</code></td>
+<td><code>decimal</code></td>
+<td>sim</td>
+<td>Valor, em dinheiro, do ativo.</td>
+</tr>
+<tr>
+<td><code>kind</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Tipo do ativo.</td>
+</tr>
+<tr>
+<td><code>assignor_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados do cedente do ativo. Consulte a seção <a href="#assignor_attributes">assignor_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+<tr>
+<td><code>guarantor_attributes</code></td>
+<td><code>object</code></td>
+<td>não</td>
+<td>Dados do avalista do ativo. Consulte a seção <a href="#guarantor_attributes">guarantor_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+<tr>
+<td><code>payer_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados do sacado do ativo. Consulte a seção <a href="#payer_attributes">payer_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+<tr>
+<td><code>asset_coverage_nfe_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados da nota fiscal do ativo. Consulte a seção <a href="#asset_coverage_nfe_attributes">asset_coverage_nfe_attributes</a> para a relação completa dos parâmetros.</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
+<h3 id='assignor_attributes'>assignor_attributes</h3>
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>document_number</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Número do documento do cedente, sem pontuação.</td>
+</tr>
+<tr>
+<td><code>address_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados do endereço do cedente. Consulte a seção <a href="#address_attributes">address_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+<tr>
+<td><code>asset_part_variant_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados do gerais sobre o cedente. Consulte a seção <a href="#asset_part_variant_attributes">asset_part_variant_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+</tbody></table>
+<h3 id='guarantor_attributes'>guarantor_attributes</h3>
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>document_number</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Número do documento do avalista, sem pontuação.</td>
+</tr>
+<tr>
+<td><code>address_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados do endereço do avalista. Consulte a seção <a href="#address_attributes">address_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+<tr>
+<td><code>asset_part_variant_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados do gerais sobre o avalista. Consulte a seção <a href="#asset_part_variant_attributes">asset_part_variant_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+</tbody></table>
+<h3 id='payer_attributes'>payer_attributes</h3>
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>document_number</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Número do documento do sacado, sem pontuação.</td>
+</tr>
+<tr>
+<td><code>address_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados do endereço do sacado. Consulte a seção <a href="#address_attributes">address_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+<tr>
+<td><code>asset_part_variant_attributes</code></td>
+<td><code>object</code></td>
+<td>sim</td>
+<td>Dados do gerais sobre o sacado. Consulte a seção <a href="#asset_part_variant_attributes">asset_part_variant_attributes</a> para a relação completa dos parâmetros.</td>
+</tr>
+</tbody></table>
+<h3 id='address_attributes'>address_attributes</h3>
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>city</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Nome da cidade.</td>
+</tr>
+<tr>
+<td><code>complement</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Complemento ou ponto de referência do endereço.</td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Número do endereço.</td>
+</tr>
+<tr>
+<td><code>neighborhood</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Nome do bairro.</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Nome do estado abreviado.</td>
+</tr>
+<tr>
+<td><code>street</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Logradouro do endereço.</td>
+</tr>
+<tr>
+<td><code>zip_code</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Número do CEP do endereço.</td>
+</tr>
+</tbody></table>
+<h3 id='asset_coverage_nfe_attributes'>asset_coverage_nfe_attributes</h3>
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>nfe_access_key</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Adicionar descrição.</td>
+</tr>
+</tbody></table>
+<h3 id='asset_part_variant_attributes'>asset_part_variant_attributes</h3>
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Tipo</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>city_registration_number</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>company_name</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>contact_representative_kind</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>contact_representative_name</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>contact_representative_email</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>contact_representative_phone</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>string</code></td>
+<td>sim</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>phone_number</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+<tr>
+<td><code>state_registration_number</code></td>
+<td><code>string</code></td>
+<td>não</td>
+<td>Adicionar descrição.</td>
+</tr>
+</tbody></table>
+<h2 id='consultar-duplicata'>Consultar duplicata</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Este é um exemplo do objeto retornado na resposta deste endpoint:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetTradeBill"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"acquiredAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-16T04:13:38.000-03:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-22T22:10:02.556-03:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-24"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"emittedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-21T00:50:12.000-03:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"goods"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-22T22:10:02.556-03:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"54.59"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"assetCoverageNfe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetCoverageNfe"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"nfeAccessKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35200248477780000191550010000033561442834725"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"assetOperationParts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetOperationPart"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assignor"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"assetPartVariant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPartVariant"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="s2">"cityRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"953k8mizk"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de Sá, de Lara e Castelo"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marli Teixeira"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lynwood_rosenbaum@zemlak.name"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativePhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(38) 99247-7565"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"evan_brown@darecormier.org"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Norberto Veloso"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(33) 96202-8383"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"stateRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ynn9rb"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Limoeiro"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lote 41"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"82196"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paradise Square"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GO"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rodovia Isadora Siqueiro"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"52540-655"</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="s2">"assetPart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPart"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"documentNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00187107602"</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">}</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetOperationPart"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guarantor"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"assetPartVariant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPartVariant"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="s2">"cityRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kzvrq2lcp"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Barros, Sanches e Geraldes"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"João Gabriel Monteira"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darell@grimesmacgyver.io"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativePhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(85) 92014-4051"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"timmy@howeleffler.com"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ryan Vimaranes Jr."</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(62) 99116-0506"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"stateRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00fz08"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"26"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Bananal"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apto. 168"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"497"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eagle Court"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RN"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rodovia Arthur Guedes"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21886-071"</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="s2">"assetPart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPart"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"documentNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08752688542"</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">}</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetOperationPart"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"payer"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"assetPartVariant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPartVariant"</span><span class="p">,</span><span class="w">
+                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="s2">"cityRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wz2tt8d4u"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bonfim-Roriz"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maya Mendes"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativeEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"von_crist@turnerjerde.net"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"contactRepresentativePhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(99) 94857-5017"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monique@cronadickinson.co"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ricardo Goulart"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(99) 91677-0397"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"stateRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mfsfmh"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"São Tiago"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Quadra 90"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eagle Crossing"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DF"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Viela Cauã"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"41192-548"</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">},</span><span class="w">
+                                        </span><span class="s2">"assetPart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPart"</span><span class="p">,</span><span class="w">
+                                                </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"documentNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"07903828819"</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">}</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<p>Este endpoint retorna as informações de um ativo específico do tipo duplicata vinculado ao seu cadastro na plataforma.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code>GET /api/v1/assets/trade_bills/&lt;id&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>Parâmetro</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td><code>id</code></td>
+<td>sim</td>
+<td>Identificador do ativo do tipo duplicata registrado na plataforma</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
+<h2 id='listar-duplicatas'>Listar duplicatas</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Este é um exemplo do objeto retornado na resposta deste endpoint:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetTradeBill"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"acquiredAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-16T04:13:38.000-03:00"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-22T22:10:02.556-03:00"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"dueDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-24"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"emittedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-21T00:50:12.000-03:00"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"goods"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-03-22T22:10:02.556-03:00"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"54.59"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"assetCoverageNfe"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetCoverageNfe"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"nfeAccessKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35200248477780000191550010000033561442834725"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"assetOperationParts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetOperationPart"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assignor"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"assetPartVariant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPartVariant"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"cityRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"953k8mizk"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"de Sá, de Lara e Castelo"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Marli Teixeira"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lynwood_rosenbaum@zemlak.name"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativePhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(38) 99247-7565"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"evan_brown@darecormier.org"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Norberto Veloso"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(33) 96202-8383"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"stateRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ynn9rb"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"25"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Limoeiro"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lote 41"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"82196"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paradise Square"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GO"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rodovia Isadora Siqueiro"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"52540-655"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">},</span><span class="w">
+                                            </span><span class="s2">"assetPart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPart"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                        </span><span class="s2">"documentNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00187107602"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">}</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetOperationPart"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"guarantor"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"assetPartVariant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPartVariant"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"cityRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kzvrq2lcp"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Barros, Sanches e Geraldes"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"João Gabriel Monteira"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darell@grimesmacgyver.io"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativePhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(85) 92014-4051"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"timmy@howeleffler.com"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ryan Vimaranes Jr."</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(62) 99116-0506"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"stateRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00fz08"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"26"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rio Bananal"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apto. 168"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"497"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eagle Court"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RN"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rodovia Arthur Guedes"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21886-071"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">},</span><span class="w">
+                                            </span><span class="s2">"assetPart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPart"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                        </span><span class="s2">"documentNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08752688542"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">}</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetOperationPart"</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"payer"</span><span class="p">,</span><span class="w">
+                                </span><span class="s2">"assetPartVariant"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPartVariant"</span><span class="p">,</span><span class="w">
+                                        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                            </span><span class="s2">"cityRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wz2tt8d4u"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bonfim-Roriz"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeKind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"contact"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Maya Mendes"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativeEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"von_crist@turnerjerde.net"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"contactRepresentativePhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(99) 94857-5017"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"monique@cronadickinson.co"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ricardo Goulart"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"phoneNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(99) 91677-0397"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"stateRegistrationNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mfsfmh"</span><span class="p">,</span><span class="w">
+                                            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"address"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                        </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"São Tiago"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Quadra 90"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"810"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"neighborhood"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Eagle Crossing"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DF"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Viela Cauã"</span><span class="p">,</span><span class="w">
+                                                        </span><span class="s2">"zipCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"41192-548"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">},</span><span class="w">
+                                            </span><span class="s2">"assetPart"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assetPart"</span><span class="p">,</span><span class="w">
+                                                    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                                                        </span><span class="s2">"documentNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"07903828819"</span><span class="w">
+                                                    </span><span class="p">}</span><span class="w">
+                                                </span><span class="p">}</span><span class="w">
+                                            </span><span class="p">}</span><span class="w">
+                                        </span><span class="p">}</span><span class="w">
+                                    </span><span class="p">}</span><span class="w">
+                                </span><span class="p">}</span><span class="w">
+                            </span><span class="p">}</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+<p>Este endpoint lista todos os ativos do tipo duplicata vinculados ao seu cadastro na plataforma.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><code>GET /api/v1/assets/trade_bills</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>Parâmetro</th>
+<th>Default</th>
+<th>Obrigatório?</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td><code>p</code></td>
+<td>&#39;&#39;</td>
+<td>não</td>
+<td>Define os critérios de paginação do resultado da consulta. Consulte a seção <a href="#paginacao-de-resultados">Paginação de resultados</a> para entender melhor como este parâmetro funciona.</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>&#39;&#39;</td>
+<td>não</td>
+<td>Define filtros de pesquisa que devem ser aplicados na consulta. Consulte a seção <a href="#filtros-de-pesquisa">Filtros de pesquisa</a> para entender melhor como este parâmetro funciona.</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>&#39;&#39;</td>
+<td>não</td>
+<td>Define os critérios de ordenação do resultado da consulta. Consulte a seção <a href="#ordenacao-de-resultados">Ordenação de resultados</a> para entender melhor como este parâmetro funciona.</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<h1 id='consultas-avancadas'>Consultas avançadas</h1><h2 id='paginacao-de-resultados'>Paginação de resultados</h2><h2 id='filtros-de-pesquisa'>Filtros de pesquisa</h2><h2 id='ordenacao-de-resultados'>Ordenação de resultados</h2><h1 id='erros'>Erros</h1>
+<p>A seguir listamos os erros que eventualmente podem ocorrer ao enviar uma requisição para nossa API e também uma breve descrição das possíveis causas de cada problema:</p>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Código</th>
+<th>Erro</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>Bad Request</td>
+<td>A requisição não foi montada corretamente. Pode ser que o corpo da requisição possua algum erro de formatação ou que algum parâmetro do cabeçalho esteja mal preenchido.</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Unauthorized</td>
+<td>Não foi possível autenticar seu acesso. Pode ser que o token de autenticação não tenha sido adicionado ao cabeçalho da requisição ou que ele não tenha sido preenchido corretamente.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Not Found</td>
+<td>O recurso solicitado não foi encontrado. Pode ser que o ID passado na requisição esteja errado, que não exista um registro cadastrado com o ID fornecido ou que o endereço tenha sido digitado errado.</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>Internal Server Error</td>
+<td>Ocorreu algum problema interno na API ao tentar processar a requisição. Se o problema persistir, nos mande uma mensagem através <a href="http://example.com/developers">desse link</a> com mais detalhes sobre a requisição que deu problema.</td>
 </tr>
 <tr>
 <td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>Service Unavailable</td>
+<td>Estamos realizando a manutenção da nossa plataforma e estamos fora do ar por alguns momentos. Tente enviar a requisição novamente dentro de alguns instantes.</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="json">json</a>
           </div>
       </div>
     </div>
